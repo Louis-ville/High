@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tell me</table></title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+             <h1></h1> 
+             <p> 
+                <span class="cor-x">Tel</span><span class="cor-y">l me</span>
+              </p>
+        
+        </div>
+    </header>
+
+    <main class="container"> <h2>Clássicos</h2> <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"> 
+        
+        <div class="col">   
+        <div class="card h-100">
+            <img src="mojito.png" class="card-img-top" alt="Mojito"> 
+            <div class="card-body">
+                <h3>Mojito</h3> 
+                <p class="card-text">O Mojito nasceu em Cuba, com raízes que remontam ao século XVI. Originalmente chamado “El Draque”, 
+                    era uma mistura de aguardente, limão, açúcar e hortelã usada por marinheiros para combater escorbuto. Com o tempo, a aguardente foi substituída pelo rum,
+                     tornando a bebida mais suave e agradável. No século XX, ganhou popularidade mundial, 
+                     especialmente em Havana, onde se tornou um ícone cultural.</p>
+                
+                <div id="receita-mojito" class="receita-detalhe" style="display: none;">
+                     <ol> <li>Rum, Hortelã, Limão, Açúcar.</li>
+                        
+                    </ol>
+                </div>
+
+                <button class="btn btn-primary" 
+                    onmouseover="mostrarReceita('mojito')"        
+                    onmouseout="esconderReceita('mojito')">
+                    <i class="fas fa-search-plus"></i> Ver Receita   
+                </button>
+            </div>
+            </div>
+        </div>
+        </div>
+  
+        <div class="col">
+        <div class="card h-100">
+                <img src="Margarita.png" class="card-img-top" alt="Margarita"> 
+                <div class="card-body">
+                <h4>Margarita</h4> <p class="card-text">A origem da Margarita é cercada de lendas. Uma das versões mais aceitas diz que foi 
+                    criada em 1938 por Carlos Herrera para uma cliente alérgica a outros destilados, misturando tequila, licor de laranja e 
+                    limão. Outra história atribui a criação à socialite Margarita Sames, que popularizou a bebida em festas luxuosas no México. 
+                    Seja qual for a verdade, a Margarita se tornou símbolo da tequila mexicana.</p>
+                   
+                 <div id="receita-margarita" class="receita-detalhe" style="display: none;">
+                        <ol> <li>Sal,Rum, Hortelã, Limão, Açúcar.</li>
+                           
+                       </ol>
+                    </div>
+                    <button class="btn btn-primary" 
+                       onmouseover="mostrarReceita('margarita')"        
+                       onmouseout="esconderReceita('margarita')">
+                       <i class="fas fa-search-plus"></i> Ver Receita   
+                   </button>
+                </div>
+                </div>
+        </div>
+        </div>
+
+    <footer class="bg-dark text-white p-4 mt-5">
+        <div class="container">
+            <h4>Assine nossa Newsletter</h4> <p>Tudo sobre o mundo dos bartenders</p>
+            
+            <form class="mt-3">
+                <div class="mb-3">
+                    <label class="form-label" for="inputNome">Nome Completo</label>
+                    <input type="text" id="inputNome" class="form-control" placeholder="Seu nome" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label" for="inputTelefone">Telefone (Somente números)</label>
+                    <input type="number" id="inputTelefone" class="form-control" placeholder="Ex: 45999911123" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="inputEmail">Email</label>
+                    <input type="email" id="inputEmail" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="selectAssunto">Assunto da Mensagem</label>
+                    <select id="selectAssunto" class="form-select">
+                        <option selected>Selecione um tópico</option>
+                        <option value="1">Sugestão de Receita</option>
+                        <option value="2">Dúvida Técnica</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="areaMensagem">Mensagem Detalhada</label>
+                    <textarea id="areaMensagem" class="form-control" rows="3" placeholder="Escreva sua mensagem ou sugestão aqui..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-success">Enviar Sugestão</button> </form>
+            
+            <hr class="my-3">
+
+            <div class="container-fluid text-center">
+                 <h6>Tecnologias para Desenvolvimento de Sistemas - UNIOESTE</h6>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    
+    <script src="script.js"></script>  
+</body>
+</html>

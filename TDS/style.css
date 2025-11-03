@@ -18,3 +18,11 @@
   .card-img-top{
     image-resolution: 10%;
   }
+
+
+  /* .card2{ 
+    
+    width: 500px;  Usando PX  
+    height: 500px;
+    object-fit: cover;  Evita distorção se as dimensões forem diferentes 
+   } */
