@@ -1,13 +1,13 @@
 
 
-/* Cor X: Vamos usar azul, por exemplo */
+/* Cor X: blue */
 .cor-x {
     color: blue; /* Substitua 'blue' pela cor que você deseja */
-    font-weight: bold; /* Opcional: só para destacar mais */
+    font-weight: bold; /* destaque */
     font-size: 150px;
   }
   
-  /* Cor Y: Vamos usar vermelho, por exemplo */
+  /* Cor Y: red */
   .cor-y {
     color: red; /* Substitua 'red' pela cor que você deseja */
     font-weight: bold;
@@ -15,14 +15,17 @@
   }
 
 
-  .card-img-top{
-    image-resolution: 10%;
-  }
 
 
-  /* .card2{ 
-    
-    width: 500px;  Usando PX  
-    height: 500px;
-    object-fit: cover;  Evita distorção se as dimensões forem diferentes 
-   } */
+  
+/* Limita a altura das imagens do Card e força o ajuste */
+.card-img-top {
+  /* REQUISITO: Usando a unidade REM para a altura máxima (ex: 15rem = 240px) */
+  max-height: 22rem; 
+  
+  /* Garante que a imagem sempre preencha o espaço sem distorcer, cortando o que sobrar */
+  object-fit: cover; 
+  
+  /* REQUISITO: Se quiser uma borda em PX */
+  border-bottom: 2px solid #ddd;
+}
