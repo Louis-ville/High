@@ -2,7 +2,7 @@ const mapaDestilados = [
     { destilado: "Tequila", coqueteis: ["Margarita", "Tequila Sunrise"] },
     { destilado: "Rum", coqueteis: ["Mojito", "Cuba Libre"] },
     { destilado: "Gin", coqueteis: ["Martini"] },
-    { destilado: "Vodka", coqueteis: ["a"]},
+    { destilado: "Vodka", coqueteis: ["Cosmopolitan"]},
     { destilado: "Whiskey", coqueteis: ["Old Fashioned"] }
    
 ];

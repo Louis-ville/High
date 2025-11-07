@@ -2,14 +2,14 @@
 
 /* Cor X: blue */
 .cor-x {
-    color: blue; /* Substitua 'blue' pela cor que você deseja */
+    color: darkblue; /* Substitua 'blue' pela cor que você deseja */
     font-weight: bold; /* destaque */
     font-size: 150px;
   }
   
   /* Cor Y: red */
   .cor-y {
-    color: red; /* Substitua 'red' pela cor que você deseja */
+    color: darkred; /* Substitua 'red' pela cor que você deseja */
     font-weight: bold;
     font-size: 150px;
   }
@@ -25,7 +25,7 @@
     font-size: 1rem; 
     
     /* Garante uma margem de segurança */
-    padding-bottom: 50px; /* REQUISITO: Uso da unidade PX */
+    padding-bottom: 50px; 
 }
 
   
@@ -42,7 +42,60 @@
   border-bottom: 2px solid #ddd;
 }
 
+/* Espaçamento abaixo do título do footer */
 footer h4 {
-  margin-bottom: 0.8em; /* Espaçamento abaixo do título do footer */
+  margin-bottom: 0.8em; 
 }
 
+ /* Centraliza o Footer */
+footer .container-fluid {
+  display: flex; 
+  justify-content: center;
+  padding: 1.5em 0; 
+}
+
+/*informa ao navegador que a posição do elemento .card é relativa à sua posição normal na página*/
+/*propriedade de transição suaviza a mudança de estado*/
+.card {
+  position: relative; 
+  transition: transform 0.3s;
+}
+
+
+/* Usado para estilizar o resultado da busca interativa */
+/* Usando o inline-block para controlar o tamanho do espaçamento */
+#resultado-sugestao p {
+  display: inline-block; 
+  background-color: pink;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+
+
+/* Muda a cor da borda e adiciona alguns pxs */
+/* Usando o none, deixano o elemento não interagivel*/
+.receita-detalhe, #alerta-envio {
+  display: none; 
+  padding: 10px;
+  border: 1px dashed green;
+  margin-top: 10px;
+}
+
+main h2 { 
+  /*color: #01509f;*/
+  color:darkblue;
+}
+
+section h3{
+  color:darkred;
+  font-weight: bold;
+}
+
+/* como tem dois formulários houve o uso do "label" */
+label[for="selectDestilado"] {
+  color: darkred;
+  font-size: 21px;
+  font-weight: bold;
+}
