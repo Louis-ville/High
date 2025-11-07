@@ -1,4 +1,60 @@
-function mostrarReceita(idCoquetel) {
+const mapaDestilados = [
+    { destilado: "Tequila", coqueteis: ["Margarita", "Tequila Sunrise"] },
+    { destilado: "Rum", coqueteis: ["Mojito", "Cuba Libre"] },
+    { destilado: "Gin", coqueteis: ["Martini"] },
+    { destilado: "Vodka", coqueteis: ["a"]},
+    { destilado: "Whiskey", coqueteis: ["Old Fashioned"] }
+   
+];
+
+function sugerirCoquetel() {
+    const select = document.getElementById('selectDestilado');
+    const resultadoDiv = document.getElementById('resultado-sugestao');
+    const destiladoEscolhido = select.value; 
+
+    
+    const info = mapaDestilados.find(item => item.destilado === destiladoEscolhido);
+
+    // Limpa o conteúdo anterior
+    resultadoDiv.innerHTML = "";
+
+    if (info && info.coqueteis.length > 0) {
+        // Manipulação de DOM VISÍVEL
+        
+        // Constrói uma lista HTML (<ul>) a partir do Array de coquetéis
+        let listaHTML = '<ul>';
+        info.coqueteis.forEach(coquetel => {
+            listaHTML += `<li>${coquetel}</li>`;
+        });
+        listaHTML += '</ul>';
+
+        // Escreve o resultado final no HTML
+        resultadoDiv.innerHTML = `
+            <p class="h5 text-primary">Coquetéis que utilizam ${info.destilado}:</p>
+            ${listaHTML}
+        `;
+    } else {
+        // Mensagem padrão ou se a opção vazia for selecionada
+        resultadoDiv.innerHTML = `<p class="mb-0">Aguardando sua seleção...</p>`;
+    }
+}
+
+
+
+// Function Expression 
+const toggleReceita = function(idCoquetel) {
+    const detalhes = document.getElementById(`receita-${idCoquetel}`); 
+    
+    if (detalhes.style.display === 'none' || detalhes.style.display === '') {
+        detalhes.style.display = 'block'; 
+    } else {
+        detalhes.style.display = 'none';
+    }
+}; 
+
+
+
+/*function mostrarReceita(idCoquetel) {
     const detalhes = document.getElementById(`receita-${idCoquetel}`);
     detalhes.style.display = 'block'; 
 }
@@ -6,7 +62,7 @@ function mostrarReceita(idCoquetel) {
 function esconderReceita(idCoquetel) {
     const detalhes = document.getElementById(`receita-${idCoquetel}`);
     detalhes.style.display = 'none';
-}
+}*/
 
 
 

@@ -15,17 +15,34 @@
   }
 
 
-
+  body {
+    /* Imagem de Fundo */
+    background-image: url('bar.png'); 
+    background-size: cover; /* Faz a imagem cobrir todo o fundo sem repetir */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    
+    
+    font-size: 1rem; 
+    
+    /* Garante uma margem de segurança */
+    padding-bottom: 50px; /* REQUISITO: Uso da unidade PX */
+}
 
   
 /* Limita a altura das imagens do Card e força o ajuste */
 .card-img-top {
-  /* REQUISITO: Usando a unidade REM para a altura máxima (ex: 15rem = 240px) */
+  width: 100%;
+  /*  Usando a unidade REM para a altura máxima (ex: 15rem = 240px) */
   max-height: 22rem; 
   
   /* Garante que a imagem sempre preencha o espaço sem distorcer, cortando o que sobrar */
   object-fit: cover; 
   
-  /* REQUISITO: Se quiser uma borda em PX */
+  /* Borda em PX */
   border-bottom: 2px solid #ddd;
 }
+
+footer h4 {
+  margin-bottom: 0.8em; /* Espaçamento abaixo do título do footer */
+}
+
